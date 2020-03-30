@@ -13,6 +13,7 @@ body{
     border:2px solid #666;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0,.5);
     margin:20px auto;
+    box-sizing: border-box;
 }
 .rule{
     box-sizing: border-box;
@@ -105,8 +106,7 @@ body{
     color:orangered;
 }
 .pop .buttonList{
-    display:flex;
-    justify-content:space-evenly;
+    text-align: center;
 }
 .pop .button{
     box-sizing: border-box;
@@ -117,6 +117,7 @@ body{
     border-radius: 100%;
     text-align: center;
     padding: 8px;
+    margin:0 8px;
     display: inline-block;
     cursor: pointer;
 }

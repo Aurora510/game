@@ -14,6 +14,7 @@ game = {
         this.el = options.el;
         this.popDiv = options.popDiv;
         this.oRule = options.oRule;
+        this.initWidHeight();
         this.initData();
         this.render();
         this.control();
@@ -21,6 +22,18 @@ game = {
     initData:function(){
         this.oMain = this.el.getElementsByClassName('main')[0];
         this.startBtn = this.el.getElementsByClassName('startBtn')[0];
+    },
+    initWidHeight:function(){
+        var devWidth = window.innerWidth;
+        var devHeight = window.innerHeight;
+        console.log(this.el)
+        if(devWidth<500){
+            this.el.style.width = devWidth+'px';
+            this.el.style.height = devHeight+'px';
+            // this.el.style.border = 'none';
+            this.el.style.margin = 0;
+        }
+        console.log(window.innerHeight,"++",window.innerWidth)
     },
     render:function(){
         this.renderRow();
@@ -147,6 +160,7 @@ game = {
         againBtn.onclick = function(){
             self.popDiv.style.display = 'none';
             self.reStart();
+            continueBtn.style.backgroundColor = 'green';
         }
         continueBtn.onclick = function(){
             if(self.isMoveOut){return};
@@ -160,6 +174,7 @@ game = {
         if(this.isMoveOut){
             var continueBtn = this.popDiv.getElementsByClassName('continue')[0];
             continueBtn.style.backgroundColor = '#ccc'; 
+            continueBtn.onclick = null;
         }else{return}
     },
 }
