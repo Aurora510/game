@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>别踩白块经典版</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+    <div id="outer">
+        <div class="startBtn">开始游戏</div>
+        <div class="main">
+            <!-- <div class="row">
+                <div class="col"></div>
+                <div class="col target"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div> -->
+        </div>
+        <p class="rule"><span>游戏规则：</span><span style="text-indent:2em;text-align: justify;">点击开始游戏”进行游戏，随着分数的增加，游戏难度也会增加，每10分增加一个档次，难度没有上限，只要你手速够快，随你尽情挥洒。</span></p>
+        <div class="pop">
+            <p>score:&nbsp;&nbsp;<span class="score"></span></p>
+            <div class="buttonList">
+                <div class="button back">
+                    <span>&#xe63b;</span>
+                    <div class="btnWord">返回</div>
+                </div>
+                <div class="button continue">
+                    <span>&#xe917;</span>
+                    <div class="btnWord">继续</div>
+                </div>
+                <div class="button again">
+                    <span>&#xe71d;</span>
+                    <div class="btnWord">重新玩</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js.js"></script>
+    <script>
+        game.init({
+            el:document.getElementById('outer'),
+            popDiv:document.getElementsByClassName('pop')[0],
+            oRule:document.getElementsByClassName('rule')[0],
+        })
+    </script>
+</body>
+</html>

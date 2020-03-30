@@ -1,0 +1,129 @@
+*{
+    padding:0;
+    margin:0;
+    border:0;
+}
+body{
+    background-color:hsla(207, 94%, 79%, 0.842);
+}
+#outer{
+    position: relative;
+    width:400px;
+    height:600px;
+    border:2px solid #666;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0,.5);
+    margin:20px auto;
+}
+.rule{
+    box-sizing: border-box;
+    width:100%;
+    height:80%;
+    font-family: '微软雅黑';
+    font-size: 20px;
+    font-weight: bold;
+    color:#666;
+    padding:20px 10px;
+ }
+.rule span{
+    display: block;
+    margin-bottom: 10px;
+}
+.startBtn{
+    width:90%;
+    height:90px;
+    /* font-family: 'game'; */
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 90px;
+    margin:10px auto;
+    border: 1px solid rgba(190, 197, 124,.5);
+    border-radius: 30px;
+    background-image:-webkit-radial-gradient(yellow 10%,green 90%);
+    background-image: radial-gradient(yellow 10%,green 90%);
+    box-shadow: 1px 1px 2px 3px rgba(24, 61, 2, 0.6);
+    cursor:pointer;
+}
+.main{
+    width:100%;
+    height:100%;
+    background-image: -webkit-linear-gradient(#0280f7,rgb(255, 0, 234));
+    background-image: linear-gradient(#0280f7,rgb(255, 0, 234));
+    overflow: hidden;
+    display:none;
+}
+.main .row{
+    width:100%;
+    height:25%;
+}
+.main .row .col{
+    box-sizing: border-box;
+    width:25%;
+    height:100%;
+    float: left;
+    border:1px solid;
+}
+.main .row .target{
+    background-color: black;
+}
+
+/*游戏弹窗*/
+@font-face{
+    font-family: 'game';
+    src:url('./font/沐瑶软笔手写体.ttf');
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 1632129 */
+    src: url('https://at.alicdn.com/t/font_1632129_4mbfowrvqyc.eot');
+    src: url('https://at.alicdn.com/t/font_1632129_4mbfowrvqyc.eot?#iefix') format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_1632129_4mbfowrvqyc.woff2') format('woff2'),
+    url('https://at.alicdn.com/t/font_1632129_4mbfowrvqyc.woff') format('woff'),
+    url('https://at.alicdn.com/t/font_1632129_4mbfowrvqyc.ttf') format('truetype'),
+    url('https://at.alicdn.com/t/font_1632129_4mbfowrvqyc.svg#iconfont') format('svg');
+  }
+.pop{
+    position: absolute;
+    left: 50px;
+    top:250px;
+    width:300px;
+    height:150px;
+    font-family: 'game';
+    border:1px solid #fff;
+    background-color: #fff;
+    border-radius: 70px;
+    margin:50px auto;
+    display:none;
+}
+.pop p{
+    font-size: 30px;
+    color:#666;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+.pop p span{
+    color:orangered;
+}
+.pop .buttonList{
+    display:flex;
+    justify-content:space-evenly;
+}
+.pop .button{
+    box-sizing: border-box;
+    width:70px;
+    height:70px;
+    background-color: green;
+    color:#fff;
+    border-radius: 100%;
+    text-align: center;
+    padding: 8px;
+    display: inline-block;
+    cursor: pointer;
+}
+.pop .button:hover{
+    font-size: 18px;
+}
+.pop .button span{
+    font-family: "iconfont" !important;
+    font-size: 30px;
+}
