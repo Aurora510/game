@@ -26,14 +26,11 @@ game = {
     initWidHeight:function(){
         var devWidth = window.innerWidth;
         var devHeight = window.innerHeight;
-        console.log(this.el)
         if(devWidth<500){
             this.el.style.width = devWidth+'px';
             this.el.style.height = devHeight+'px';
-            // this.el.style.border = 'none';
             this.el.style.margin = 0;
         }
-        console.log(window.innerHeight,"++",window.innerWidth)
     },
     render:function(){
         this.renderRow();
